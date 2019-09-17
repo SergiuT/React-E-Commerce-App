@@ -10,36 +10,17 @@ const shrinkLabelStyles = css`
   left: 0;
 `;
 
-export const GroupContainer = styled.div`
-  position: relative;
-  margin: 45px 0;
+export const ContactFormContainer = styled.div`
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+`
 
-  input[type='password'] {
-    letter-spacing: 0.3em;
-  }
-`;
-
-export const FormInputContainer = styled.input`
-  background: none;
-  background-color: white;
-  color: ${subColor};
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid ${subColor};
-  margin: 25px 0;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus ~ label {
-    ${shrinkLabelStyles}
-  }
-`;
+export const MessageForm = styled.div`
+    display: flex;
+    flex-direction: column;
+`
 
 export const FormInputLabel = styled.label`
   color: ${subColor};
@@ -52,6 +33,26 @@ export const FormInputLabel = styled.label`
   transition: 300ms ease all;
 
   &.shrink {
+    ${shrinkLabelStyles}
+  }
+`;
+
+export const FormInputContainer = styled.input`
+  background: none;
+  background-color: white;
+  color: ${subColor};
+  font-size: 18px;
+  position: relative;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  margin: 25px 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus ~ label {
     ${shrinkLabelStyles}
   }
 `;
