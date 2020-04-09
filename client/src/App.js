@@ -15,6 +15,7 @@ import Header from './components/header/header.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 import ContactForm from './components/contact-form/contact-form.component';
+import { BorderBottom } from './components/header/header.styles';
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
