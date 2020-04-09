@@ -10,7 +10,7 @@ import {
 
 const StripeCheckoutButton = ({ price, history, clearCart }) => {
   const priceForStripe = price * 100;
-  const publishableKey = 'pk_test_Bzc2HvEUtsZebqzV9TiJJutY00NMnAA6KK';
+  const publishableKey = `${process.env.STRIPE_KEY}`;
 
   const onToken = token => {
     axios({
