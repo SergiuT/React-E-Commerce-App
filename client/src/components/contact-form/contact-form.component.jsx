@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 import './contact-form.styles.jsx'
 import FormInput from '../form-input/form-input.component';
@@ -9,7 +8,7 @@ import { SignInTitle } from '../sign-in/sign-in.styles.jsx';
 
 const ContactForm = () => {
 
-    const [userData, setUserData] = useState({ name: '', email: '', message: ''});
+    const [userData, setUserData] = useState({ name: '', email: '', message: '' });
     const { name, email, message } = userData;
 
     const handleSubmit = (e) => {
@@ -23,7 +22,7 @@ const ContactForm = () => {
     }
 
     const handleClick = () => {
-        setUserData({ ...userData, name: '', email: '', message: ''});
+        setUserData({ ...userData, name: '', email: '', message: '' });
     }
 
     return (
@@ -54,7 +53,7 @@ const ContactForm = () => {
                     handleChange={handleChange}
                     required
                 />
-                <CustomButton onClick={handleClick} style={{margin: '0 auto'}} type="submit">Submit</CustomButton>
+                <CustomButton onClick={handleClick} style={{ margin: '0 auto' }} type="submit">Submit</CustomButton>
             </form>
         </ContactFormContainer>
     )
